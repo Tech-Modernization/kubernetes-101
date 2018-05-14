@@ -64,7 +64,7 @@ build-all: build-0 build-1 build-2
 
 #Cleanup any leftovers so we can try demo again
 demo-cleanup:
-	kubectl delete deployments -l app=hello-world-kubernetes-deployment --now
+	kubectl delete deployments -l name=hello-world-kubernetes-deployment --now
 	kubectl delete services -l name=hello-world-kubernetes-service --now
 	kubectl delete secret -l name=hello-world-kubernetes-secret --now
 	kubectl delete configmap -l name=hello-world-kubernetes-configmap --now
